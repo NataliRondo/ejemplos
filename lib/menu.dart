@@ -1,3 +1,4 @@
+import 'package:ejemplos/ejemplos/contador.dart';
 import 'package:ejemplos/ejemplos/ver_mas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -74,6 +75,17 @@ class _MenuState extends State<Menu> {
                 );
               },
               child: const Text("Leer más"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: ((context) => const ExampleSlideCountdown()),
+                  ),
+                );
+              },
+              child: const Text("Contador"),
             ),
           ],
         ),
